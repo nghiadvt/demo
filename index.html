@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Agency - Financial & Legal Services Las Vegas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0f172a',    /* Dark Blue - Trust */
+                            gold: '#d4af37',    /* Gold - Prosperity */
+                            cream: '#fdfbf7',   /* Cream - Warmth */
+                            light: '#f1f5f9',   /* Slate - Modern */
+                            dark: '#1e293b',    /* Dark Mode BG */
+                            red: '#b91c1c',     /* Accent Red */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        doc: ['Lora', 'serif'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 30s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1, boxShadow: '0 0 0 0px rgba(212, 175, 55, 0.7)' },
+                            '50%': { opacity: .8, boxShadow: '0 0 0 10px rgba(212, 175, 55, 0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* --- CUSTOM STYLES --- */
+        
+        /* Language Display Logic (Default English) */
+        .lang-vi, .lang-en { display: none; }
+        
+        /* Strict display rules */
+        body[data-lang="vi"] .lang-vi { display: block !important; }
+        body[data-lang="vi"] span.lang-vi { display: inline !important; }
+        
+        body[data-lang="en"] .lang-en { display: block !important; }
+        body[data-lang="en"] span.lang-en { display: inline !important; }
+        
+        /* Fallback for other flags to EN (US Standard) */
+        body[data-lang="cn"] .lang-en { display: block !important; } 
+        body[data-lang="es"] .lang-en { display: block !important; }
+        body[data-lang="fr"] .lang-en { display: block !important; }
+        body[data-lang="cn"] span.lang-en { display: inline !important; } 
+        body[data-lang="es"] span.lang-en { display: inline !important; }
+        body[data-lang="fr"] span.lang-en { display: inline !important; }
+
+        .text-gradient {
+            background: linear-gradient(to right, #d4af37, #fcd34d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- DECORATIVE BACKGROUNDS --- */
+        .us-border-top {
+            border-top: 4px solid;
+            border-image: linear-gradient(to right, #b91c1c 0%, #ffffff 50%, #1e40af 100%) 1;
+        }
+        .bg-star-pattern {
+            background-color: #0f172a;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24'%3E%3Cpath fill='%23d4af37' fill-opacity='0.05' d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/%3E%3C/svg%3E");
+        }
+        
+        /* IMPROVED US MAP SVG BACKGROUND */
+        .bg-us-map {
+            /* High quality US Map SVG Data URI */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 550'%3E%3Cpath fill='%23FFFFFF' fill-opacity='0.1' stroke='%23d4af37' stroke-width='0.5' stroke-opacity='0.2' d='M934 233l-2-2-1 4-3 1-3 5 1 2 2-1 3-3 2-2 1-4zM240 54l-2 1v3l3-1 2 1 2-2-1-3-4 1zM79 179l-4 3 2 4-2 3-3 2-2-4 3-6 6-2zM33 138l-2 4-1-2 1-3 2 1zM11 127l-4 4 1 2 4-1 2-4-3-1zM294 13l-4 1-1 4 2 2 3-1 2-3-2-3zM85 49l-2 3-2 1 1 3 4-2 1-3-2-2zM128 47l-2 3 1 3 3-2 1-3-3-1zM27 96l-3 4 2 2 2-3 2-3-3 0zM195 72l-1 4 3 1 2-3-1-3-3 1zM218 506l-1 4 2 2 3-2 1-3-2-3-3 2zM905 235l-2 3-1 4 2 2 3-3 1-3-3-3z'/%3E%3Cpath fill='none' stroke='%23d4af37' stroke-width='1' stroke-opacity='0.15' d='M822.4 200.6l3.6 1.8 1.8 4.2-2.4 2.4 1.2 4.2 4.8-1.2 2.4 1.2-1.8 4.8 2.4 3 4.2-1.8 1.8 1.2 3.6-2.4 1.2-3.6 4.8 1.2 1.2-2.4 4.8-1.2-1.2-3.6-2.4-1.2 1.2-3.6 3.6-1.2 3-2.4-1.2-3-4.8 1.2-1.2 3-2.4-1.2-1.2-3.6-3 1.2-1.2 3.6-3.6 1.2-3.6-2.4-1.2 3.6-2.4 1.2z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        /* Lang Dropdown & Floating Widget */
+        .lang-dropdown { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
+        .group:hover .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .floating-widget { position: fixed; bottom: 30px; right: 30px; z-index: 998; display: flex; flex-direction: column; gap: 15px; }
+        .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.3s; cursor: pointer; }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-zalo { background: #0068FF; }
+        .float-phone { background: #d4af37; animation: pulse 2s infinite; }
+        .float-mode { background: #334155; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+
+        /* Comparison Slider */
+        .comparison-slider { position: relative; width: 100%; height: 600px; overflow: hidden; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; background: #555; }
+        .comparison-item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .comparison-overlay { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 3px solid #d4af37; z-index: 10; background: #fff; }
+        .slider-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: #d4af37; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; z-index: 20; cursor: ew-resize; box-shadow: 0 0 15px rgba(0,0,0,0.4); border: 2px solid white; }
+        
+        /* Document Styles */
+        .doc-container { width: 100%; height: 100%; padding: 40px; font-family: 'Lora', serif; font-size: 13px; line-height: 1.6; overflow-y: auto; }
+        .doc-vi { background-color: #fff5f5; background-image: url('https://www.transparenttextures.com/patterns/linen.png'); color: #333; border-right: 1px solid #ccc; min-width: 100%; }
+        .doc-vi .border-pattern { border: 4px double #d68383; padding: 20px; height: 100%; }
+        .doc-en { background-color: white; color: #000; }
+        .doc-en .header-line { border-bottom: 2px solid #000; margin-bottom: 20px; padding-bottom: 10px; }
+        .doc-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; opacity: 0.08; pointer-events: none; z-index: 0; }
+        .translator-cert { margin-top: 30px; border-top: 1px solid #ccc; padding-top: 10px; font-size: 11px; font-style: italic; color: #555; }
+
+        /* Sliders */
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 24px; width: 24px; border-radius: 50%; background: #d4af37; cursor: pointer; margin-top: -10px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: #e2e8f0; border-radius: 2px; }
+        
+        /* Feedback Scroll */
+        .snap-x-mandatory { scroll-snap-type: x mandatory; }
+        .snap-center { scroll-snap-align: center; }
+        .hide-scroll-bar::-webkit-scrollbar { display: none; }
+        
+        /* Modal */
+        .modal { transition: opacity 0.3s ease, visibility 0.3s ease; opacity: 0; visibility: hidden; }
+        .modal.active { opacity: 1; visibility: visible; }
+        .modal-content { transform: scale(0.9); transition: transform 0.3s ease; }
+        .modal.active .modal-content { transform: scale(1); }
+        
+        /* Roadmap Styles */
+        .roadmap-container { position: relative; padding-left: 40px; }
+        .roadmap-line { position: absolute; left: 15px; top: 20px; bottom: 20px; width: 2px; background: #e2e8f0; z-index: 0; }
+        .roadmap-progress { position: absolute; left: 15px; top: 20px; width: 2px; height: 0%; background: #d4af37; z-index: 1; transition: height 1.5s ease-out; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        .roadmap-step { opacity: 0; transform: translateX(20px); transition: all 0.6s ease-out; position: relative; margin-bottom: 3rem; }
+        .roadmap-step:last-child { margin-bottom: 0; }
+        .roadmap-step.active { opacity: 1; transform: translateX(0); }
+        .step-icon { position: absolute; left: -41px; width: 34px; height: 34px; border-radius: 50%; background: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; z-index: 10; font-size: 14px; color: #94a3b8; transition: all 0.4s ease; }
+        .roadmap-step.active .step-icon { border-color: #d4af37; background: #d4af37; color: white; box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2); transform: scale(1.1); }
+        
+        /* Blog Grid Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .dark .custom-scrollbar::-webkit-scrollbar-track { background: #1e293b; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; }
+
+        /* FAQ Accordion */
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .5s ease-in-out; }
+        @keyframes sweep { 0% { opacity: 0; transform: translateY(-10px) } 100% { opacity: 1; transform: translateY(0) } }
+    </style>
+</head>
+<body class="bg-brand-cream text-slate-800 font-sans antialiased overflow-x-hidden transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100" data-lang="en">
+
+    <!-- FLOATING WIDGETS -->
+    <div class="floating-widget">
+        <button onclick="toggleDarkMode()" class="float-btn float-mode" title="Dark/Light Mode"><i class="fas fa-moon" id="dark-icon"></i></button>
+        <a href="https://zalo.me/0900000000" target="_blank" class="float-btn float-zalo"><i class="fas fa-comment-dots"></i></a>
+        <a href="tel:+17021234567" class="float-btn float-phone"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-brand-navy/95 backdrop-blur-md text-white transition-all duration-300 shadow-lg dark:bg-slate-950/95 us-border-top" id="navbar">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="https://julie-agency.com/wp-content/uploads/2021/08/Julie-Agency-logo-_-horizontal-transparency-min.png" 
+                     alt="Julie Agency" 
+                     class="h-14 w-auto object-contain"
+                     onerror="this.style.display='none'; document.getElementById('logo-fallback').classList.remove('hidden');">
+                <span id="logo-fallback" class="hidden text-2xl font-serif font-bold tracking-wider">
+                    <span class="text-brand-gold text-3xl">✦</span> Julie Agency
+                </span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-6 font-light text-sm tracking-wide">
+                <a href="#home" class="hover:text-brand-gold transition"><span class="lang-vi">TRANG CHỦ</span><span class="lang-en">HOME</span></a>
+                <a href="#services" class="hover:text-brand-gold transition"><span class="lang-vi">DỊCH VỤ</span><span class="lang-en">SERVICES</span></a>
+                <a href="#mortgage" class="hover:text-brand-gold transition"><span class="lang-vi">VAY NHÀ</span><span class="lang-en">MORTGAGE</span></a>
+                <a href="#immigration" class="hover:text-brand-gold transition"><span class="lang-vi">DI TRÚ</span><span class="lang-en">IMMIGRATION</span></a>
+                <a href="#blog" class="hover:text-brand-gold transition"><span class="lang-vi">TIN TỨC</span><span class="lang-en">BLOG</span></a>
+                
+                <div class="relative group">
+                    <button class="flex items-center gap-2 border border-white/30 px-3 py-1 rounded-full hover:bg-white/10 transition">
+                        <span id="current-lang-flag">🇺🇸</span> <span id="current-lang-code">EN</span> <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="lang-dropdown absolute right-0 top-full mt-2 w-32 bg-white text-brand-navy rounded-lg shadow-xl py-2 z-50 dark:bg-slate-800 dark:text-white">
+                        <button onclick="setLanguage('en')" class="w-full text-left px-4 py-2 hover:bg-brand-light dark:hover:bg-slate-700 flex gap-2"><span>🇺🇸</span> English</button>
+                        <button onclick="setLanguage('vi')" class="w-full text-left px-4 py-2 hover:bg-brand-light dark:hover:bg-slate-700 flex gap-2"><span>🇻🇳</span> Tiếng Việt</button>
+                        <button onclick="setLanguage('cn')" class="w-full text-left px-4 py-2 hover:bg-brand-light dark:hover:bg-slate-700 flex gap-2"><span>🇨🇳</span> 中文 (EN)</button>
+                        <button onclick="setLanguage('es')" class="w-full text-left px-4 py-2 hover:bg-brand-light dark:hover:bg-slate-700 flex gap-2"><span>🇪🇸</span> Español (EN)</button>
+                        <button onclick="setLanguage('fr')" class="w-full text-left px-4 py-2 hover:bg-brand-light dark:hover:bg-slate-700 flex gap-2"><span>🇫🇷</span> Français (EN)</button>
+                    </div>
+                </div>
+
+                <button onclick="openBookingModal()" class="bg-brand-gold text-brand-navy px-5 py-2 rounded-full font-semibold hover:bg-white transition shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap">
+                    <span class="lang-vi">ĐẶT HẸN</span><span class="lang-en">BOOK NOW</span>
+                </button>
+            </div>
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-slate-700 p-4 dark:bg-slate-950">
+            <a href="#home" class="block py-2 hover:text-brand-gold">Home</a>
+            <a href="#mortgage" class="block py-2 hover:text-brand-gold">Mortgage</a>
+            <a href="#immigration" class="block py-2 hover:text-brand-gold">Immigration</a>
+            <div class="flex gap-4 mt-4 border-t border-slate-700 pt-4">
+                <button onclick="setLanguage('vi')">🇻🇳</button><button onclick="setLanguage('en')">🇺🇸</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Home Las Vegas" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-brand-navy/70 mix-blend-multiply dark:bg-slate-950/80"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-red-900/20 pointer-events-none"></div>
+            <!-- US Map SVG Overlay -->
+            <div class="absolute inset-0 bg-us-map opacity-30 pointer-events-none"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center md:text-left md:flex md:items-center">
+            <div class="md:w-2/3">
+                <span class="text-brand-gold font-serif italic text-xl mb-4 block animate-fade-in-up">
+                    <span class="lang-vi">Chào mừng đến với Las Vegas</span><span class="lang-en">Welcome to Las Vegas</span>
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white font-serif leading-tight mb-6 drop-shadow-lg">
+                    <span class="lang-vi">Giấc mơ Mỹ của bạn, <br/><span class="text-gradient">Trách nhiệm của chúng tôi.</span></span>
+                    <span class="lang-en">Your American Dream, <br/><span class="text-gradient">Our Responsibility.</span></span>
+                </h1>
+                <p class="text-slate-200 text-lg mb-8 max-w-2xl font-light dark:text-slate-300">
+                    <span class="lang-vi">Chuyên gia tư vấn vay mua nhà, tái cấp vốn và thủ tục di trú. Đồng hành cùng cộng đồng người Việt xây dựng tổ ấm vững chắc trên đất Mỹ.</span>
+                    <span class="lang-en">Expert in mortgage loans, refinancing, and immigration services. Accompanying the community to build solid homes in the US.</span>
+                </p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <a href="#mortgage" class="bg-brand-gold text-brand-navy px-8 py-3 rounded-full font-bold hover:bg-white transition shadow-lg text-center transform hover:scale-105">
+                        <i class="fas fa-calculator mr-2"></i> <span class="lang-vi">Tính toán khoản vay</span><span class="lang-en">Loan Calculator</span>
+                    </a>
+                    <a href="#services" class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-brand-navy transition text-center transform hover:scale-105">
+                        <i class="fas fa-list-ul mr-2"></i> <span class="lang-vi">Xem dịch vụ</span><span class="lang-en">Our Services</span>
+                    </a>
+                </div>
+            </div>
+             <div class="hidden md:block md:w-1/3 text-right animate-float">
+                <div class="inline-block bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl dark:bg-slate-900/50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-brand-gold to-yellow-600 rounded-full flex items-center justify-center text-brand-navy font-bold text-2xl shadow-lg">
+                            <i class="fas fa-user-check text-white"></i>
+                        </div>
+                        <div class="text-left text-white">
+                            <p class="text-sm opacity-80 uppercase tracking-widest"><span class="lang-vi">Đã hỗ trợ</span><span class="lang-en">Supported</span></p>
+                            <p class="font-bold text-3xl">500+ <span class="text-brand-gold text-lg"><span class="lang-vi">Gia đình</span><span class="lang-en">Families</span></span></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-brand-navy rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div class="text-left text-white">
+                            <p class="text-sm opacity-80 uppercase tracking-widest"><span class="lang-vi">Hồ sơ thành công</span><span class="lang-en">Approved Cases</span></p>
+                            <p class="font-bold text-3xl">1,200+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US & VIDEO INTRO -->
+    <section id="about-us" class="py-20 bg-white dark:bg-slate-900 relative overflow-hidden bg-us-map">
+        <!-- Logo Watermark -->
+        <div class="watermark-logo"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <!-- Video/Image Side -->
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-gold/20 rounded-full z-0 animate-pulse"></div>
+                    <div class="relative rounded-2xl shadow-2xl overflow-hidden border-4 border-white dark:border-slate-800 group cursor-pointer h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Office" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition">
+                            <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center border-2 border-white hover:scale-110 transition">
+                                <i class="fas fa-play text-3xl text-white ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
+                            <p class="font-serif italic"><span class="lang-vi">"Xem video giới thiệu về Julie Agency"</span><span class="lang-en">"Watch Julie Agency Introduction"</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Side -->
+                <div class="md:w-1/2">
+                    <span class="text-brand-gold font-bold tracking-widest uppercase text-sm block mb-2"><span class="lang-vi">Về chúng tôi</span><span class="lang-en">About Us</span></span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-navy mb-6 dark:text-white">
+                        <span class="lang-vi">Người bạn đồng hành tin cậy</span><span class="lang-en">Trusted Partner</span>
+                    </h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed dark:text-slate-300">
+                        <span class="lang-vi">Julie Agency được thành lập với sứ mệnh xóa bỏ rào cản ngôn ngữ và pháp lý cho người Việt tại Mỹ. Chúng tôi hiểu rằng việc mua nhà hay làm giấy tờ định cư không chỉ là thủ tục, mà là khởi đầu cho một cuộc sống mới.</span>
+                        <span class="lang-en">Julie Agency was founded with the mission to remove language and legal barriers for Vietnamese people in the US. We understand that buying a home or handling immigration papers is not just a procedure, but the beginning of a new life.</span>
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-brand-gold text-xl"></i>
+                            <span class="font-semibold text-brand-navy dark:text-white"><span class="lang-vi">Tư vấn tận tâm</span><span class="lang-en">Dedicated Consulting</span></span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-brand-gold text-xl"></i>
+                            <span class="font-semibold text-brand-navy dark:text-white"><span class="lang-vi">Chi phí minh bạch</span><span class="lang-en">Transparent Costs</span></span>
+                        </div>
+                         <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-brand-gold text-xl"></i>
+                            <span class="font-semibold text-brand-navy dark:text-white"><span class="lang-vi">Hỗ trợ 24/7</span><span class="lang-en">24/7 Support</span></span>
+                        </div>
+                         <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-brand-gold text-xl"></i>
+                            <span class="font-semibold text-brand-navy dark:text-white"><span class="lang-vi">Bảo mật thông tin</span><span class="lang-en">Secure Info</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section id="services" class="py-20 bg-brand-navy text-white dark:bg-slate-950 bg-star-pattern relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mt-2"><span class="lang-vi">Dịch vụ Chuyên nghiệp</span><span class="lang-en">Professional Services</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-home"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Home Loans</h3>
+                    <p class="text-slate-300 text-xs">Purchase & Refinance.</p>
+                </div>
+                <!-- 2 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-heartbeat"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Life Insurance</h3>
+                    <p class="text-slate-300 text-xs">Family Protection.</p>
+                </div>
+                <!-- 3 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-passport"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Immigration</h3>
+                    <p class="text-slate-300 text-xs">USCIS Services.</p>
+                </div>
+                <!-- 4 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-file-contract"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Legal Docs</h3>
+                    <p class="text-slate-300 text-xs">Document Prep.</p>
+                </div>
+                <!-- 5 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-stamp"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Legalization</h3>
+                    <p class="text-slate-300 text-xs">For Vietnam.</p>
+                </div>
+                <!-- 6 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-language"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Translation</h3>
+                    <p class="text-slate-300 text-xs">VN-EN Certified.</p>
+                </div>
+                <!-- 7 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-signature"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Notary Public</h3>
+                    <p class="text-slate-300 text-xs">Licensed Service.</p>
+                </div>
+                <!-- 8 -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-brand-gold/20 transition group dark:bg-slate-900/50 duration-300">
+                    <div class="w-12 h-12 bg-brand-gold rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl mb-4 group-hover:scale-110 transition"><i class="fas fa-drafting-compass"></i></div>
+                    <h3 class="text-lg font-bold font-serif mb-2">Drafting</h3>
+                    <p class="text-slate-300 text-xs">Engineering Design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: SUCCESS STORIES (CASE STUDIES) -->
+    <section class="py-20 bg-brand-light dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-brand-navy text-center mb-12 dark:text-white">
+                <span class="lang-vi">Câu chuyện thành công</span><span class="lang-en">Real Success Stories</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border-l-4 border-brand-gold">
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Mortgage Case</div>
+                    <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-3">
+                        <span class="lang-vi">Mua nhà với điểm tín dụng thấp</span>
+                        <span class="lang-en">Home Purchase with Low Credit Score</span>
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                        <span class="lang-vi"><strong>Thách thức:</strong> Khách hàng có điểm FICO 580, bị 3 ngân hàng từ chối.</span>
+                        <span class="lang-en"><strong>Challenge:</strong> Client had 580 FICO score, rejected by 3 major banks.</span>
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">
+                        <span class="lang-vi"><strong>Giải pháp:</strong> Julie Agency áp dụng chương trình FHA đặc biệt, hỗ trợ cải thiện điểm tín dụng cấp tốc.</span>
+                        <span class="lang-en"><strong>Solution:</strong> We utilized a specialized FHA program and rapid credit repair assistance.</span>
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center text-brand-gold font-bold text-sm">
+                        <i class="fas fa-check-circle mr-2"></i> <span class="lang-vi">Thành công trong 30 ngày</span><span class="lang-en">Closed in 30 Days</span>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border-l-4 border-brand-gold">
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Immigration Case</div>
+                    <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-3">
+                        <span class="lang-vi">Bảo lãnh vợ chồng thiếu bằng chứng</span>
+                        <span class="lang-en">Spousal Visa with Limited Evidence</span>
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                        <span class="lang-vi"><strong>Thách thức:</strong> Cặp đôi ít hình ảnh chung, không có tài sản chung.</span>
+                        <span class="lang-en"><strong>Challenge:</strong> Couple had few photos together and no shared assets.</span>
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">
+                        <span class="lang-vi"><strong>Giải pháp:</strong> Xây dựng timeline mối quan hệ chi tiết, bổ sung tường trình từ người thân.</span>
+                        <span class="lang-en"><strong>Solution:</strong> Built detailed relationship timeline, added affidavits from family.</span>
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center text-brand-gold font-bold text-sm">
+                        <i class="fas fa-check-circle mr-2"></i> <span class="lang-vi">Đậu Visa ngay lần đầu</span><span class="lang-en">Visa Approved 1st Try</span>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border-l-4 border-brand-gold">
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Legal Case</div>
+                    <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-3">
+                        <span class="lang-vi">Hợp pháp hóa lãnh sự khẩn cấp</span>
+                        <span class="lang-en">Emergency Document Legalization</span>
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                        <span class="lang-vi"><strong>Thách thức:</strong> Cần giấy ủy quyền gửi về VN để bán đất gấp trong 3 ngày.</span>
+                        <span class="lang-en"><strong>Challenge:</strong> Needed Power of Attorney in Vietnam for urgent land sale in 3 days.</span>
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">
+                        <span class="lang-vi"><strong>Giải pháp:</strong> Dịch vụ công chứng & Hợp pháp hóa hỏa tốc (Rush Service).</span>
+                        <span class="lang-en"><strong>Solution:</strong> Rush Notary & Consular Legalization service deployed.</span>
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center text-brand-gold font-bold text-sm">
+                        <i class="fas fa-check-circle mr-2"></i> <span class="lang-vi">Hoàn tất trong 48h</span><span class="lang-en">Completed in 48h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMMIGRATION ROADMAP & SLIDER -->
+    <section id="immigration" class="py-20 bg-brand-cream dark:bg-slate-900 relative overflow-hidden bg-us-map">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-700 via-white to-red-700"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-sm">
+                    <span class="lang-vi">Di trú & Giấy tờ</span><span class="lang-en">Immigration & Docs</span>
+                </span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-navy mt-2 dark:text-white">
+                    <span class="lang-vi">Chuẩn bị hồ sơ chuẩn Mỹ</span><span class="lang-en">US Standard Documentation</span>
+                </h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto text-sm">
+                    <span class="lang-vi">Hồ sơ đẹp quyết định 80% tỷ lệ đậu Visa. Chúng tôi biến giấy tờ Việt Nam thành bản dịch chuẩn mực, có công chứng.</span>
+                    <span class="lang-en">A perfect application decides 80% of Visa success rate. We transform Vietnamese documents into standardized translations with notary seals.</span>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Comparison Slider -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-brand-navy dark:text-white flex items-center gap-2">
+                        <i class="fas fa-check-circle text-brand-gold"></i>
+                        <span class="lang-vi">Mẫu Dịch Thuật Kết Hôn</span><span class="lang-en">Marriage Certificate Translation</span>
+                    </h3>
+                    
+                    <div class="comparison-slider shadow-2xl rounded-lg border-4 border-white dark:border-slate-700" id="compare-slider">
+                        <!-- English Doc -->
+                        <div class="comparison-item">
+                            <div class="doc-container doc-en">
+                                <div class="text-center header-line">
+                                    <h2 class="text-lg font-bold uppercase font-serif">Certified Translation</h2>
+                                    <h3 class="text-md font-bold mt-2 uppercase">Marriage Certificate</h3>
+                                    <div class="text-[10px] italic mt-1">Socialist Republic of Vietnam</div>
+                                </div>
+                                <div class="space-y-3 font-serif">
+                                    <div class="grid grid-cols-2 gap-4 text-xs">
+                                        <div><strong>Husband:</strong> <span class="uppercase text-brand-navy">Nguyen Van A</span></div>
+                                        <div><strong>Wife:</strong> <span class="uppercase text-brand-navy">Tran Thi B</span></div>
+                                        <div><strong>DOB:</strong> 01/01/1990</div>
+                                        <div><strong>DOB:</strong> 05/05/1992</div>
+                                        <div><strong>Nationality:</strong> Vietnamese</div>
+                                        <div><strong>Nationality:</strong> Vietnamese</div>
+                                    </div>
+                                    <div class="border-t border-b border-slate-200 py-2 my-2 text-xs">
+                                        <p><strong>Place of Registration:</strong> People's Committee of Ward X, District Y, Hanoi City</p>
+                                        <p><strong>Date of Registration:</strong> December 20, 2020</p>
+                                    </div>
+                                    <div class="translator-cert">
+                                        <p class="font-bold mb-1">CERTIFICATION OF ACCURACY</p>
+                                        <p>I, <strong>Julie Linh Harrill</strong>, fluent in English and Vietnamese, hereby certify that this is a true and accurate translation of the attached original document.</p>
+                                        <div class="mt-4 flex justify-between items-end">
+                                            <div>
+                                                <div class="h-10 border-b border-black w-32 mb-1"></div>
+                                                <span>Translator Signature</span>
+                                            </div>
+                                            <div class="text-right">
+                                                <p><strong>Julie Agency</strong></p>
+                                                <p>Las Vegas, NV</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vietnamese Doc -->
+                        <div class="comparison-overlay" id="compare-overlay">
+                            <div class="doc-container doc-vi" id="doc-vi-content">
+                                <div class="border-pattern">
+                                    <div class="text-center mb-6">
+                                        <h2 class="text-xl font-bold uppercase text-red-800 font-serif">Giấy Chứng Nhận<br>Kết Hôn</h2>
+                                        <div class="text-[10px] italic mt-1">Số: 123/ĐK-KH</div>
+                                    </div>
+                                    <div class="space-y-4 font-serif text-slate-800">
+                                        <div class="grid grid-cols-2 gap-2 text-xs">
+                                            <div class="border-r border-red-200 pr-2">
+                                                <p class="font-bold text-red-800">Bên Chồng:</p>
+                                                <p class="uppercase font-bold">Nguyễn Văn A</p>
+                                                <p>Sinh ngày: 01/01/1990</p>
+                                            </div>
+                                            <div class="pl-2">
+                                                <p class="font-bold text-red-800">Bên Vợ:</p>
+                                                <p class="uppercase font-bold">Trần Thị B</p>
+                                                <p>Sinh ngày: 05/05/1992</p>
+                                            </div>
+                                        </div>
+                                        <div class="text-xs mt-4">
+                                            <p><strong>Nơi đăng ký:</strong> UBND Phường X...</p>
+                                            <p><strong>Ngày đăng ký:</strong> 20/12/2020</p>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-12 right-12 w-20 h-20 border-4 border-red-600 rounded-full flex items-center justify-center opacity-50 rotate-[-10deg]">
+                                        <div class="text-[8px] text-red-600 text-center font-bold uppercase">UBND<br>Phường X<br>Ký Tên</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-ew-resize z-30" id="compare-input">
+                        <div class="slider-handle" id="slider-handle"><i class="fas fa-arrows-alt-h"></i></div>
+                    </div>
+                </div>
+
+                <!-- NEW ROADMAP DESIGN -->
+                <div class="roadmap-container pl-12 py-4" id="roadmap-container">
+                    <h3 class="text-xl font-bold mb-8 text-brand-navy dark:text-white flex items-center gap-2">
+                        <i class="fas fa-map-signs text-brand-gold"></i>
+                        <span class="lang-vi">Lộ trình hồ sơ</span><span class="lang-en">Application Roadmap</span>
+                    </h3>
+                    
+                    <div class="roadmap-line"></div>
+                    <div class="roadmap-progress" id="roadmap-progress"></div>
+                    
+                    <div class="roadmap-step relative" data-index="1">
+                        <div class="step-icon"><i class="fas fa-comments"></i></div>
+                        <div class="ml-4 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition">
+                            <h4 class="text-lg font-bold text-brand-navy dark:text-white"><span class="lang-vi">1. Tư Vấn</span><span class="lang-en">1. Consultation</span></h4>
+                            <p class="text-slate-600 text-sm mt-1 dark:text-slate-400">Đánh giá hồ sơ miễn phí, tư vấn giải pháp tối ưu.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step relative" data-index="2">
+                        <div class="step-icon"><i class="fas fa-file-signature"></i></div>
+                        <div class="ml-4 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition">
+                            <h4 class="text-lg font-bold text-brand-navy dark:text-white"><span class="lang-vi">2. Chuẩn Bị</span><span class="lang-en">2. Preparation</span></h4>
+                            <p class="text-slate-600 text-sm mt-1 dark:text-slate-400">Dịch thuật công chứng, điền đơn (Forms) chính xác.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step relative" data-index="3">
+                        <div class="step-icon"><i class="fas fa-paper-plane"></i></div>
+                        <div class="ml-4 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition">
+                            <h4 class="text-lg font-bold text-brand-navy dark:text-white"><span class="lang-vi">3. Xử Lý</span><span class="lang-en">3. Processing</span></h4>
+                            <p class="text-slate-600 text-sm mt-1 dark:text-slate-400">Nộp hồ sơ cho USCIS/NVC và theo dõi tiến độ.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-step relative" data-index="4">
+                        <div class="step-icon"><i class="fas fa-check"></i></div>
+                        <div class="ml-4 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm border-l-4 border-l-brand-gold border-slate-100 dark:border-slate-700 hover:shadow-md transition">
+                            <h4 class="text-lg font-bold text-brand-gold"><span class="lang-vi">4. Kết Quả</span><span class="lang-en">4. Result</span></h4>
+                            <p class="text-slate-600 text-sm mt-1 dark:text-slate-400">Nhận chấp thuận, hướng dẫn phỏng vấn và hậu mãi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESTORED: INTERACTIVE MORTGAGE CALCULATOR -->
+    <section id="mortgage" class="py-20 bg-brand-light relative overflow-hidden dark:bg-slate-900">
+        <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-sm">
+                    <span class="lang-vi">Giả lập khoản vay</span><span class="lang-en">Loan Simulator</span>
+                </span>
+                <h2 class="text-4xl font-serif font-bold text-brand-navy mt-2 mb-6 dark:text-white">
+                    <span class="lang-vi">Tính toán ngân sách</span><span class="lang-en">Calculate Budget</span>
+                </h2>
+                <div class="p-4 bg-white rounded-lg border-l-4 border-brand-gold shadow-sm dark:bg-slate-800 dark:text-slate-300">
+                    <p class="text-sm italic text-slate-500 dark:text-slate-400">"We help you choose the most economical loan."</p>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 w-full bg-white text-brand-navy p-8 rounded-2xl shadow-2xl border border-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:text-white">
+                <h3 class="text-xl font-bold mb-6 border-b pb-2 dark:border-slate-600">
+                    <span class="lang-vi">Ước tính khoản vay</span><span class="lang-en">Estimate Payment</span>
+                </h3>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-sm"><span class="lang-vi">Giá trị nhà</span><span class="lang-en">Home Value</span></label>
+                        <span class="font-bold text-brand-gold" id="home-val-display">$400,000</span>
+                    </div>
+                    <input type="range" min="100000" max="1000000" step="5000" value="400000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer" id="home-val-slider">
+                </div>
+
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-sm"><span class="lang-vi">Trả trước</span><span class="lang-en">Down Payment</span></label>
+                        <span class="font-bold text-brand-gold" id="down-val-display">20%</span>
+                    </div>
+                    <input type="range" min="0" max="50" step="1" value="20" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer" id="down-val-slider">
+                </div>
+
+                <div class="bg-brand-navy p-6 rounded-xl text-center relative overflow-hidden text-white dark:bg-slate-900">
+                    <div class="relative z-10">
+                        <p class="text-xs uppercase text-slate-300 font-bold tracking-widest mb-1">
+                            <span class="lang-vi">Thanh toán / tháng</span><span class="lang-en">Monthly Payment</span>
+                        </p>
+                        <p class="text-4xl font-serif font-bold text-brand-gold" id="monthly-payment">$2,148</p>
+                        <p class="text-xs text-slate-400 mt-2">*Excluding Taxes & Insurance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="py-20 bg-brand-light dark:bg-slate-900 bg-dot-pattern">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-brand-navy text-center mb-12 dark:text-white"><span class="lang-vi">Đội ngũ chuyên gia</span><span class="lang-en">Expert Team</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Member 1: Julie Linh Harrill -->
+                <div class="team-card group relative h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition">
+                    <img src="https://julie-agency.com/wp-content/uploads/2022/05/Julie-Harrill-Mortgage-Loan-Officer-Case-Manager-Julie-Agency.jpg" alt="Julie Linh Harrill" class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white">
+                        <h3 class="text-2xl font-serif font-bold">Julie Linh Harrill</h3>
+                        <p class="text-brand-gold text-sm uppercase tracking-wider font-bold mb-1">Mortgage Loan Advisor</p>
+                        <p class="text-xs text-slate-300 mb-2">NMLS 2290070 | Case Manager</p>
+                        
+                        <!-- Hover Info: Contact Details -->
+                        <div class="team-info h-0 overflow-hidden group-hover:h-auto group-hover:mt-4 transition-all duration-500">
+                            <div class="space-y-2 text-sm mb-4 border-t border-white/20 pt-4">
+                                <p class="flex items-center"><i class="fas fa-phone-alt text-brand-gold w-6"></i> <a href="tel:7327397989" class="hover:text-brand-gold">732-739-7989</a></p>
+                                <p class="flex items-center"><i class="fas fa-envelope text-brand-gold w-6"></i> <a href="mailto:julie@julie-agency.com" class="hover:text-brand-gold truncate">julie@julie-agency.com</a></p>
+                            </div>
+                            <a href="#contact" class="inline-block bg-brand-gold text-brand-navy px-4 py-2 rounded text-sm font-bold w-full text-center hover:bg-white transition">Contact Julie</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2: Tabitha Thomas -->
+                <div class="team-card group relative h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition">
+                    <img src="https://julie-agency.com/wp-content/uploads/2022/05/Tabitha-Thomas-Paralegal-Signing-Agent-Julie-Agency.jpg" alt="Tabitha Thomas" class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white">
+                        <h3 class="text-2xl font-serif font-bold">Tabitha Thomas</h3>
+                        <p class="text-brand-gold text-sm uppercase tracking-wider font-bold mb-2">Notary Signing Agent</p>
+                        
+                         <!-- Hover Info -->
+                         <div class="team-info h-0 overflow-hidden group-hover:h-auto group-hover:mt-4 transition-all duration-500">
+                            <div class="space-y-2 text-sm mb-4 border-t border-white/20 pt-4">
+                                <p class="flex items-center"><i class="fas fa-phone-alt text-brand-gold w-6"></i> <a href="tel:7023351149" class="hover:text-brand-gold">702-335-1149</a></p>
+                                <p class="flex items-center"><i class="fas fa-envelope text-brand-gold w-6"></i> <a href="mailto:tabitha@julie-agency.com" class="hover:text-brand-gold truncate">tabitha@julie-agency.com</a></p>
+                            </div>
+                            <a href="#contact" class="inline-block bg-brand-gold text-brand-navy px-4 py-2 rounded text-sm font-bold w-full text-center hover:bg-white transition">Contact Tabitha</a>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Member 3: Iris Nguyen -->
+                 <div class="team-card group relative h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition">
+                    <img src="https://julie-agency.com/wp-content/uploads/2024/04/Iris-Nguyen-Assistant-Julie-Agency.jpg" alt="Iris Nguyen" class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white">
+                        <h3 class="text-2xl font-serif font-bold">Iris Nguyen</h3>
+                        <p class="text-brand-gold text-sm uppercase tracking-wider font-bold mb-2">Assistant</p>
+                        
+                         <!-- Hover Info -->
+                         <div class="team-info h-0 overflow-hidden group-hover:h-auto group-hover:mt-4 transition-all duration-500">
+                            <div class="space-y-2 text-sm mb-4 border-t border-white/20 pt-4">
+                                <p class="flex items-center"><i class="fas fa-phone-alt text-brand-gold w-6"></i> <a href="tel:7258959091" class="hover:text-brand-gold">725-895-9091</a></p>
+                                <p class="flex items-center"><i class="fas fa-envelope text-brand-gold w-6"></i> <a href="mailto:iris@julie-agency.com" class="hover:text-brand-gold truncate">iris@julie-agency.com</a></p>
+                            </div>
+                            <a href="#contact" class="inline-block bg-brand-gold text-brand-navy px-4 py-2 rounded text-sm font-bold w-full text-center hover:bg-white transition">Contact Iris</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEEDBACK CAROUSEL -->
+    <section id="feedback" class="py-20 bg-brand-cream dark:bg-slate-800">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-3xl font-serif font-bold text-brand-navy text-center mb-12 dark:text-white">Feedback</h2>
+            <div id="feedback-scroll" class="flex overflow-x-auto gap-6 pb-8 snap-x-mandatory hide-scroll-bar px-4 md:px-0">
+                <!-- Card 1 -->
+                <div class="testimonial-card bg-white border border-slate-100 rounded-xl p-6 snap-center shrink-0 w-[300px] md:w-[350px] dark:bg-slate-900 dark:border-slate-700 shadow-md">
+                    <div class="flex items-center mb-4 text-yellow-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-600 text-sm italic mb-6 dark:text-slate-300">"Gia đình tôi mua nhà lần đầu rất bỡ ngỡ, nhưng chị Julie đã hướng dẫn tận tình."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center font-bold text-slate-500 mr-3">HV</div>
+                        <div><h4 class="font-bold text-brand-navy text-sm dark:text-white">Hùng Võ</h4><p class="text-xs text-slate-400">Mortgage</p></div>
+                    </div>
+                </div>
+                 <!-- Card 2 -->
+                <div class="testimonial-card bg-white border border-slate-100 rounded-xl p-6 snap-center shrink-0 w-[300px] md:w-[350px] dark:bg-slate-900 dark:border-slate-700 shadow-md">
+                    <div class="flex items-center mb-4 text-yellow-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-600 text-sm italic mb-6 dark:text-slate-300">"Hồ sơ bảo lãnh vợ chồng phức tạp, David đã sắp xếp timeline logic."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center font-bold text-slate-500 mr-3">TN</div>
+                        <div><h4 class="font-bold text-brand-navy text-sm dark:text-white">Thanh Nguyen</h4><p class="text-xs text-slate-400">Immigration</p></div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card bg-white border border-slate-100 rounded-xl p-6 snap-center shrink-0 w-[300px] md:w-[350px] dark:bg-slate-900 dark:border-slate-700 shadow-md">
+                    <div class="flex items-center mb-4 text-yellow-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-600 text-sm italic mb-6 dark:text-slate-300">"Dịch thuật nhanh, chuẩn xác. Rất recommend!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center font-bold text-slate-500 mr-3">ML</div>
+                        <div><h4 class="font-bold text-brand-navy text-sm dark:text-white">Mai Linh</h4><p class="text-xs text-slate-400">Translation</p></div>
+                    </div>
+                </div>
+                 <!-- Card 4 -->
+                 <div class="testimonial-card bg-white border border-slate-100 rounded-xl p-6 snap-center shrink-0 w-[300px] md:w-[350px] dark:bg-slate-900 dark:border-slate-700 shadow-md">
+                    <div class="flex items-center mb-4 text-yellow-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-600 text-sm italic mb-6 dark:text-slate-300">"Drafting Engineer chuyên nghiệp, bản vẽ chi tiết."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center font-bold text-slate-500 mr-3">KL</div>
+                        <div><h4 class="font-bold text-brand-navy text-sm dark:text-white">Kevin Le</h4><p class="text-xs text-slate-400">Engineering</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-6 flex justify-center gap-4">
+                <button onclick="scrollContainer('feedback-scroll', -320)" class="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition dark:bg-slate-700 dark:text-white"><i class="fas fa-arrow-left"></i></button>
+                <button onclick="scrollContainer('feedback-scroll', 320)" class="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition dark:bg-slate-700 dark:text-white"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: CERTIFICATIONS & AWARDS -->
+    <section class="py-20 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-serif font-bold text-brand-navy mb-10 dark:text-white">
+                <span class="lang-vi">Chứng nhận & Giải thưởng</span><span class="lang-en">Certifications & Awards</span>
+            </h2>
+            <div class="flex flex-wrap justify-center gap-10">
+                <div class="flex flex-col items-center gap-2 group">
+                    <div class="w-20 h-20 bg-brand-light dark:bg-slate-800 rounded-full flex items-center justify-center text-4xl text-brand-gold shadow-md group-hover:scale-110 transition">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <span class="text-sm font-bold text-brand-navy dark:text-white">NMLS Licensed</span>
+                    <span class="text-xs text-slate-500">ID: 2290070</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 group">
+                    <div class="w-20 h-20 bg-brand-light dark:bg-slate-800 rounded-full flex items-center justify-center text-4xl text-brand-gold shadow-md group-hover:scale-110 transition">
+                        <i class="fas fa-stamp"></i>
+                    </div>
+                    <span class="text-sm font-bold text-brand-navy dark:text-white">Notary Public</span>
+                    <span class="text-xs text-slate-500">Commissioned in NV</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 group">
+                    <div class="w-20 h-20 bg-brand-light dark:bg-slate-800 rounded-full flex items-center justify-center text-4xl text-brand-gold shadow-md group-hover:scale-110 transition">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-sm font-bold text-brand-navy dark:text-white">Best of Las Vegas</span>
+                    <span class="text-xs text-slate-500">Nominee 2024</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 group">
+                    <div class="w-20 h-20 bg-brand-light dark:bg-slate-800 rounded-full flex items-center justify-center text-4xl text-brand-gold shadow-md group-hover:scale-110 transition">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <span class="text-sm font-bold text-brand-navy dark:text-white">Certified Translator</span>
+                    <span class="text-xs text-slate-500">ATA Member</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: CTA BANNER -->
+    <section class="py-16 bg-gradient-to-r from-brand-navy to-blue-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-grid-pattern"></div>
+        <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8">
+            <div>
+                <h2 class="text-3xl font-serif font-bold mb-2">
+                    <span class="lang-vi">Bạn đã sẵn sàng cho cuộc sống mới tại Mỹ?</span>
+                    <span class="lang-en">Ready to Start Your New Life in the US?</span>
+                </h2>
+                <p class="text-blue-100 max-w-lg">
+                    <span class="lang-vi">Đừng để thủ tục giấy tờ làm chậm chân bạn. Hãy để Julie Agency đồng hành cùng bạn ngay hôm nay.</span>
+                    <span class="lang-en">Don't let paperwork slow you down. Let Julie Agency guide you today.</span>
+                </p>
+            </div>
+            <button onclick="openBookingModal()" class="bg-brand-gold text-brand-navy font-bold px-8 py-4 rounded-full shadow-lg hover:bg-white transition transform hover:scale-105 whitespace-nowrap">
+                <span class="lang-vi">ĐẶT LỊCH TƯ VẤN MIỄN PHÍ</span><span class="lang-en">BOOK FREE CONSULTATION</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- NEW BLOG LAYOUT (MAGAZINE STYLE) - MOVED DOWN -->
+    <section id="blog" class="py-20 bg-brand-light dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-brand-navy text-center mb-12 dark:text-white"><span class="lang-vi">Tin tức & Blog</span><span class="lang-en">News & Insights</span></h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Featured Post (Left - Big) -->
+                <div class="lg:col-span-2 group cursor-pointer blog-featured">
+                    <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059ee971?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Featured Blog" class="blog-featured-img w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 text-white">
+                            <span class="bg-brand-gold text-brand-navy text-xs font-bold px-3 py-1 rounded-full uppercase mb-3 inline-block">Mortgage</span>
+                            <h3 class="text-2xl md:text-4xl font-bold font-serif mb-4 group-hover:text-brand-gold transition leading-tight">
+                                <span class="lang-vi">5 Sai lầm phổ biến khi người Việt mua nhà lần đầu tại Mỹ</span>
+                                <span class="lang-en">5 Common Mistakes Vietnamese Make When Buying First Home in US</span>
+                            </h3>
+                            <p class="text-slate-200 text-sm md:text-base line-clamp-2 mb-6 max-w-2xl">Điểm tín dụng (Credit Score) chưa đủ, quên tính chi phí đóng hồ sơ (Closing cost)... là những lỗi thường gặp khiến bạn mất tiền oan.</p>
+                            <span class="text-sm font-semibold underline decoration-brand-gold underline-offset-4 flex items-center gap-2">Read Full Article <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Posts (Right - List with Vertical Scroll) -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-brand-navy dark:text-white uppercase text-sm tracking-wider">Latest Updates</h4>
+                        <span class="text-xs text-slate-500">Scroll for more <i class="fas fa-arrow-down ml-1"></i></span>
+                    </div>
+                    
+                    <div class="flex flex-col gap-4 h-[500px] overflow-y-auto custom-scrollbar pr-2">
+                        <!-- Post 1 -->
+                        <div class="flex gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition shadow-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="News 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider">Immigration</span>
+                                <h4 class="font-bold text-brand-navy dark:text-white text-sm mt-1 leading-snug group-hover:text-brand-gold transition">
+                                    <span class="lang-vi">Cập nhật bộ đề thi Quốc tịch Mỹ mới nhất 2025</span>
+                                    <span class="lang-en">Latest 2025 US Citizenship Test Updates</span>
+                                </h4>
+                                <p class="text-[10px] text-slate-500 mt-2"><i class="far fa-clock mr-1"></i> 10 min read</p>
+                            </div>
+                        </div>
+
+                        <!-- Post 2 -->
+                        <div class="flex gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition shadow-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="News 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider">Finance</span>
+                                <h4 class="font-bold text-brand-navy dark:text-white text-sm mt-1 leading-snug group-hover:text-brand-gold transition">
+                                    <span class="lang-vi">Khi nào nên Refinance (Tái cấp vốn)?</span>
+                                    <span class="lang-en">When Should You Refinance Your Home?</span>
+                                </h4>
+                                <p class="text-[10px] text-slate-500 mt-2"><i class="far fa-clock mr-1"></i> 7 min read</p>
+                            </div>
+                        </div>
+
+                        <!-- Post 3 -->
+                        <div class="flex gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition shadow-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="News 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider">Insurance</span>
+                                <h4 class="font-bold text-brand-navy dark:text-white text-sm mt-1 leading-snug group-hover:text-brand-gold transition">
+                                    <span class="lang-vi">Bảo hiểm nhân thọ: Đầu tư cho tương lai</span>
+                                    <span class="lang-en">Life Insurance: Investing for the Future</span>
+                                </h4>
+                                <p class="text-[10px] text-slate-500 mt-2"><i class="far fa-clock mr-1"></i> 5 min read</p>
+                            </div>
+                        </div>
+
+                        <!-- Post 4 (New) -->
+                        <div class="flex gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition shadow-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="News 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider">Legal</span>
+                                <h4 class="font-bold text-brand-navy dark:text-white text-sm mt-1 leading-snug group-hover:text-brand-gold transition">
+                                    <span class="lang-vi">Thủ tục công chứng giấy tờ tại Mỹ</span>
+                                    <span class="lang-en">Notary Procedures in the US Explained</span>
+                                </h4>
+                                <p class="text-[10px] text-slate-500 mt-2"><i class="far fa-clock mr-1"></i> 4 min read</p>
+                            </div>
+                        </div>
+
+                        <!-- Post 5 (New) -->
+                        <div class="flex gap-4 group cursor-pointer bg-white dark:bg-slate-800 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition shadow-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="News 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider">Engineering</span>
+                                <h4 class="font-bold text-brand-navy dark:text-white text-sm mt-1 leading-snug group-hover:text-brand-gold transition">
+                                    <span class="lang-vi">Xin giấy phép xây dựng: Những điều cần biết</span>
+                                    <span class="lang-en">Building Permits: What You Need to Know</span>
+                                </h4>
+                                <p class="text-[10px] text-slate-500 mt-2"><i class="far fa-clock mr-1"></i> 8 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (Added) -->
+    <section id="faq" class="py-20 bg-brand-light dark:bg-slate-900">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-serif font-bold text-brand-navy text-center mb-12 dark:text-white">
+                <span class="lang-vi">Câu hỏi thường gặp</span><span class="lang-en">Frequently Asked Questions</span>
+            </h2>
+            <div class="space-y-4">
+                <details class="group bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand-navy dark:text-white list-none">
+                        <span class="lang-vi">Tôi cần điểm tín dụng bao nhiêu để mua nhà?</span>
+                        <span class="lang-en">What credit score do I need to buy a house?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-300 mt-4 text-sm leading-relaxed">
+                        <span class="lang-vi">Thông thường, điểm tín dụng (FICO) từ 580 trở lên là có thể vay chương trình FHA. Tuy nhiên, điểm trên 700 sẽ giúp bạn có lãi suất tốt nhất.</span>
+                        <span class="lang-en">Typically, a FICO score of 580 or higher allows for an FHA loan. However, a score above 700 will help you secure the best interest rates.</span>
+                    </div>
+                </details>
+                
+                <details class="group bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand-navy dark:text-white list-none">
+                        <span class="lang-vi">Thời gian bảo lãnh vợ chồng mất bao lâu?</span>
+                        <span class="lang-en">How long does spousal sponsorship take?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-300 mt-4 text-sm leading-relaxed">
+                        <span class="lang-vi">Thời gian trung bình hiện nay là từ 12-18 tháng đối với công dân Mỹ bảo lãnh vợ/chồng.</span>
+                        <span class="lang-en">The current average processing time is 12-18 months for US citizens sponsoring their spouses.</span>
+                    </div>
+                </details>
+
+                <details class="group bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand-navy dark:text-white list-none">
+                        <span class="lang-vi">Dịch vụ công chứng có làm cuối tuần không?</span>
+                        <span class="lang-en">Is notary service available on weekends?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-slate-600 dark:text-slate-300 mt-4 text-sm leading-relaxed">
+                        <span class="lang-vi">Có, chúng tôi cung cấp dịch vụ công chứng di động (Mobile Notary) cả cuối tuần theo lịch hẹn trước.</span>
+                        <span class="lang-en">Yes, we provide Mobile Notary services on weekends by appointment.</span>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION (Added) -->
+    <section class="py-20 bg-brand-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-grid-pattern"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <i class="far fa-envelope-open text-5xl text-brand-gold mb-6"></i>
+            <h2 class="text-3xl font-serif font-bold mb-4">
+                <span class="lang-vi">Đăng ký nhận tin tức</span><span class="lang-en">Subscribe to Our Newsletter</span>
+            </h2>
+            <p class="text-slate-300 mb-8 max-w-lg mx-auto text-sm">
+                <span class="lang-vi">Nhận cập nhật mới nhất về lãi suất vay mua nhà và luật di trú Mỹ.</span>
+                <span class="lang-en">Get the latest updates on mortgage rates and US immigration laws.</span>
+            </p>
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Email Address" class="flex-1 p-3 rounded-lg text-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                <button type="button" class="bg-brand-gold text-brand-navy font-bold px-6 py-3 rounded-lg hover:bg-white transition">
+                    <span class="lang-vi">Đăng Ký</span><span class="lang-en">Subscribe</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="py-12 bg-white dark:bg-slate-800 border-t dark:border-slate-700">
+        <div class="container mx-auto px-6 text-center">
+             <p class="text-sm text-slate-400 mb-8 uppercase tracking-widest font-bold">Partners & Affiliations</p>
+             <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="text-4xl text-slate-600 dark:text-slate-400 flex flex-col items-center"><i class="fas fa-university mb-2"></i><span class="text-xs">Bank of America</span></div>
+                <div class="text-4xl text-slate-600 dark:text-slate-400 flex flex-col items-center"><i class="fas fa-landmark mb-2"></i><span class="text-xs">Chase</span></div>
+                <div class="text-4xl text-slate-600 dark:text-slate-400 flex flex-col items-center"><i class="fas fa-balance-scale mb-2"></i><span class="text-xs">NMLS</span></div>
+                <div class="text-4xl text-slate-600 dark:text-slate-400 flex flex-col items-center"><i class="fas fa-flag-usa mb-2"></i><span class="text-xs">USCIS</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <section id="contact" class="bg-brand-navy text-white py-20 dark:bg-slate-950">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Info & Map -->
+                <div>
+                    <h2 class="text-3xl font-serif font-bold mb-6"><span class="lang-vi">Liên hệ</span><span class="lang-en">Contact Us</span></h2>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold mr-4"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><h4 class="font-bold">Las Vegas Office</h4><p class="text-slate-400 text-sm">123 Spring Mountain Rd, Las Vegas, NV 89102</p></div>
+                        </div>
+                         <div class="flex items-start">
+                            <div class="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold mr-4"><i class="fas fa-phone-alt"></i></div>
+                            <div><h4 class="font-bold">Hotline</h4><p class="text-slate-400 text-sm">+1 (702) 123-4567</p></div>
+                        </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div class="rounded-xl overflow-hidden shadow-lg border border-white/10 h-64 w-full bg-slate-800 relative group">
+                        <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" alt="Map">
+                         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                             <div class="bg-brand-navy/80 backdrop-blur px-4 py-2 rounded-lg border border-brand-gold text-brand-gold font-bold"><i class="fas fa-map-pin mr-2"></i> Chinatown, Las Vegas</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white text-brand-navy p-8 rounded-2xl dark:bg-slate-800 dark:text-white">
+                    <h3 class="text-xl font-bold mb-4"><span class="lang-vi">Gửi lời nhắn</span><span class="lang-en">Send Message</span></h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Name" class="w-full p-3 border border-slate-300 rounded-lg dark:bg-slate-700 dark:border-slate-600">
+                        <input type="text" placeholder="Phone" class="w-full p-3 border border-slate-300 rounded-lg dark:bg-slate-700 dark:border-slate-600">
+                        <select class="w-full p-3 border border-slate-300 rounded-lg dark:bg-slate-700 dark:border-slate-600">
+                            <option>Mortgage</option><option>Immigration</option><option>Translation</option>
+                        </select>
+                        <textarea rows="4" placeholder="Message..." class="w-full p-3 border border-slate-300 rounded-lg dark:bg-slate-700 dark:border-slate-600"></textarea>
+                        <button type="button" class="w-full bg-brand-navy text-white font-bold py-3 rounded-lg hover:bg-brand-gold hover:text-brand-navy transition duration-300 dark:bg-brand-gold dark:text-brand-navy dark:hover:bg-white">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-16 pt-8 text-center text-slate-500 text-[10px] md:text-xs leading-relaxed dark:text-slate-400">
+                <p class="mb-4">Copyright 2022 Julie Agency. NMLS# 2290070. Equal Housing Opportunity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING MODAL -->
+    <div id="booking-modal" class="modal fixed inset-0 z-[1000] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="modal-content bg-white dark:bg-slate-800 w-full max-w-md rounded-2xl shadow-2xl overflow-hidden">
+            <div class="bg-brand-navy p-4 flex justify-between items-center text-white">
+                <h3 class="font-serif font-bold text-lg"><i class="fas fa-calendar-alt mr-2"></i> Book Appointment</h3>
+                <button onclick="closeBookingModal()" class="text-white/70 hover:text-white text-xl"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-6">
+                <form class="space-y-4">
+                    <input type="text" class="w-full p-3 border rounded-lg dark:bg-slate-700 dark:border-slate-600" placeholder="Name">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="date" class="w-full p-3 border rounded-lg dark:bg-slate-700 dark:border-slate-600">
+                        <input type="time" class="w-full p-3 border rounded-lg dark:bg-slate-700 dark:border-slate-600">
+                    </div>
+                    <button type="button" onclick="closeBookingModal(); alert('Sent!');" class="w-full bg-brand-gold text-brand-navy font-bold py-3 rounded-lg hover:bg-brand-navy hover:text-white transition">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Language Logic
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            const flagMap = { 'vi': '🇻🇳', 'en': '🇺🇸', 'cn': '🇨🇳', 'es': '🇪🇸', 'fr': '🇫🇷' };
+            const codeMap = { 'vi': 'VN', 'en': 'EN', 'cn': 'CN', 'es': 'ES', 'fr': 'FR' };
+            document.getElementById('current-lang-flag').textContent = flagMap[lang];
+            document.getElementById('current-lang-code').textContent = codeMap[lang];
+        }
+
+        // 2. Dark Mode
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('dark-icon');
+            if (document.documentElement.classList.contains('dark')) icon.classList.replace('fa-moon', 'fa-sun');
+            else icon.classList.replace('fa-sun', 'fa-moon');
+        }
+
+        // 3. Modal
+        function openBookingModal() { document.getElementById('booking-modal').classList.add('active'); }
+        function closeBookingModal() { document.getElementById('booking-modal').classList.remove('active'); }
+
+        // 4. Mortgage Calc
+        const homeValSlider = document.getElementById('home-val-slider');
+        const downValSlider = document.getElementById('down-val-slider');
+        const homeValDisplay = document.getElementById('home-val-display');
+        const downValDisplay = document.getElementById('down-val-display');
+        const monthlyPaymentDisplay = document.getElementById('monthly-payment');
+        function updateMortgage() {
+            const P = parseInt(homeValSlider.value);
+            const downPercent = parseInt(downValSlider.value);
+            const downPayment = P * (downPercent / 100);
+            const loanAmount = P - downPayment;
+            const r = 6.5 / 100 / 12; 
+            const n = 30 * 12;
+            let monthly = 0;
+            if (loanAmount > 0) monthly = loanAmount * ( (r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1) );
+            homeValDisplay.textContent = '$' + P.toLocaleString();
+            downValDisplay.textContent = downPercent + '% ($' + downPayment.toLocaleString() + ')';
+            monthlyPaymentDisplay.textContent = '$' + Math.round(monthly).toLocaleString();
+        }
+        homeValSlider.addEventListener('input', updateMortgage);
+        downValSlider.addEventListener('input', updateMortgage);
+        updateMortgage();
+
+        // 5. Comparison Slider
+        const compareInput = document.getElementById('compare-input');
+        const compareOverlay = document.getElementById('compare-overlay');
+        const sliderHandle = document.getElementById('slider-handle');
+        compareInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            compareOverlay.style.width = val + '%';
+            sliderHandle.style.left = val + '%';
+        });
+
+        // 6. Roadmap Scroll - UPDATED WITH SAFETY CHECK
+        const roadmapSection = document.getElementById('immigration');
+        const roadmapProgress = document.getElementById('roadmap-progress');
+        const steps = document.querySelectorAll('.roadmap-step');
+        
+        if (roadmapSection && roadmapProgress) { // Added null check
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        roadmapProgress.style.height = '100%';
+                        steps.forEach((step, index) => {
+                            setTimeout(() => { step.classList.add('active'); }, index * 400 + 500);
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(roadmapSection);
+        }
+
+        // 7. Carousel Scroll
+        function scrollContainer(id, amount) {
+            document.getElementById(id).scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
+        // 8. Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('shadow-lg');
+            else nav.classList.remove('shadow-lg');
+        });
+
+        // 9. FIX REFLOW ISSUE
+        function fixOverlayWidth() {
+            const slider = document.getElementById('compare-slider');
+            const overlayContent = document.getElementById('doc-vi-content');
+            if (slider && overlayContent) {
+                overlayContent.style.width = slider.offsetWidth + 'px';
+            }
+        }
+        // Run on load and resize
+        window.addEventListener('load', fixOverlayWidth);
+        window.addEventListener('resize', fixOverlayWidth);
+        // Also run immediately in case load event already fired
+        fixOverlayWidth();
+    </script>
+</body>
+</html>
