@@ -150,6 +150,66 @@
             box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
         }
 
+        /* Watermark Logo */
+        .watermark-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.18;
+            z-index: 0;
+            pointer-events: none;
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        @media (min-width: 768px) {
+            .watermark-logo {
+                max-width: 600px;
+                opacity: 0.2;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .watermark-logo {
+                max-width: 700px;
+            }
+        }
+
+        /* Watermark Logo for Feedback Section - Positioned at top, spans across sections */
+        .watermark-logo-feedback {
+            position: fixed;
+            top: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.18;
+            z-index: 9999;
+            pointer-events: none;
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        @media (min-width: 768px) {
+            .watermark-logo-feedback {
+                max-width: 600px;
+                opacity: 0.1;
+                top: 10%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .watermark-logo-feedback {
+                max-width: 572px;
+                top: -17%;
+                z-index: 100000;
+                position: absolute;
+            }
+        }
+
 
         /* --- DECORATIVE BACKGROUNDS --- */
         .us-border-top {
@@ -940,7 +1000,7 @@
     </section>
 
     <!-- WHY CHOOSE US SECTION -->
-    <section class="py-20 bg-gradient-to-br from-brand-light via-white to-brand-cream dark:bg-slate-900 relative overflow-hidden">
+    <section class="py-20 bg-gradient-to-br from-brand-light via-white to-brand-cream dark:bg-slate-900 relative" style="overflow-x: hidden; overflow-y: visible;">
         <div class="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12 relative z-10">
             <div class="text-center mb-16 scroll-fade-in">
                 <span class="text-brand-gold font-bold tracking-widest uppercase text-sm block mb-2">
@@ -1105,7 +1165,11 @@
     </section>
 
     <!-- FEEDBACK CAROUSEL -->
-    <section id="feedback" class="py-20 bg-brand-cream dark:bg-slate-800">
+    <section id="feedback" class="py-20 bg-brand-cream dark:bg-slate-800 relative overflow-hidden">
+        <!-- Watermark Logo -->
+        <img src="https://julie-agency.com/wp-content/uploads/2021/08/Julie-Agency-logo-_-horizontal-transparency-min.png" 
+             alt="Julie Agency Watermark" 
+             class="watermark-logo-feedback">
         <div class="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12 relative z-10">
             <h2 class="text-3xl font-serif font-bold text-brand-navy text-center mb-12 dark:text-white">Feedback</h2>
             <div id="feedback-scroll" class="flex overflow-x-auto gap-6 pb-8 snap-x-mandatory hide-scroll-bar px-4 md:px-0">
