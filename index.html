@@ -133,6 +133,24 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Navbar Enhanced Contrast - Cream background for better visibility */
+        #navbar {
+            background: rgba(253, 251, 247, 0.98) !important; /* brand-cream with high opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Dark mode navbar */
+        .dark #navbar {
+            background: rgba(15, 23, 42, 0.95) !important; /* brand-navy for dark mode */
+        }
+        
+        /* Enhanced shadow for better separation */
+        #navbar.scrolled {
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+        }
+
+
         /* --- DECORATIVE BACKGROUNDS --- */
         .us-border-top {
             border-top: 4px solid;
@@ -275,7 +293,7 @@
     </div>
 
     <!-- NAVIGATION -->
-    <nav class="fixed w-full z-50 bg-brand-navy/95 backdrop-blur-md text-white transition-all duration-300 shadow-lg dark:bg-slate-950/95 us-border-top" id="navbar">
+    <nav class="fixed w-full z-50 bg-brand-cream/98 backdrop-blur-md text-brand-navy transition-all duration-300 shadow-xl dark:bg-slate-950/95 dark:text-white us-border-top border-b-2 border-slate-300 dark:border-slate-800" id="navbar" style="box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);">
         <div class="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12 py-3 flex justify-between items-center">
             <!-- LOGO -->
             <a href="#" class="flex items-center gap-2">
@@ -289,14 +307,14 @@
             </a>
             
             <div class="hidden md:flex items-center gap-6 font-light text-sm tracking-wide">
-                <a href="#home" class="hover:text-brand-gold transition"><span class="lang-vi">TRANG CHỦ</span><span class="lang-en">HOME</span></a>
-                <a href="#services" class="hover:text-brand-gold transition"><span class="lang-vi">DỊCH VỤ</span><span class="lang-en">SERVICES</span></a>
-                <a href="#mortgage" class="hover:text-brand-gold transition"><span class="lang-vi">VAY NHÀ</span><span class="lang-en">MORTGAGE</span></a>
-                <a href="#immigration" class="hover:text-brand-gold transition"><span class="lang-vi">DI TRÚ</span><span class="lang-en">IMMIGRATION</span></a>
-                <a href="#blog" class="hover:text-brand-gold transition"><span class="lang-vi">TIN TỨC</span><span class="lang-en">BLOG</span></a>
+                <a href="#home" class="hover:text-brand-gold transition dark:hover:text-brand-gold"><span class="lang-vi">TRANG CHỦ</span><span class="lang-en">HOME</span></a>
+                <a href="#services" class="hover:text-brand-gold transition dark:hover:text-brand-gold"><span class="lang-vi">DỊCH VỤ</span><span class="lang-en">SERVICES</span></a>
+                <a href="#mortgage" class="hover:text-brand-gold transition dark:hover:text-brand-gold"><span class="lang-vi">VAY NHÀ</span><span class="lang-en">MORTGAGE</span></a>
+                <a href="#immigration" class="hover:text-brand-gold transition dark:hover:text-brand-gold"><span class="lang-vi">DI TRÚ</span><span class="lang-en">IMMIGRATION</span></a>
+                <a href="#blog" class="hover:text-brand-gold transition dark:hover:text-brand-gold"><span class="lang-vi">TIN TỨC</span><span class="lang-en">BLOG</span></a>
                 
                 <div class="relative group">
-                    <button class="flex items-center gap-2 border border-white/30 px-3 py-1 rounded-full hover:bg-white/10 transition">
+                    <button class="flex items-center gap-2 border border-brand-navy/30 dark:border-white/30 px-3 py-1 rounded-full hover:bg-brand-navy/10 dark:hover:bg-white/10 transition">
                         <span id="current-lang-flag">🇺🇸</span> <span id="current-lang-code">EN</span> <i class="fas fa-chevron-down text-xs ml-1"></i>
                     </button>
                     <div class="lang-dropdown absolute right-0 top-full mt-2 w-32 bg-white text-brand-navy rounded-lg shadow-xl py-2 z-50 dark:bg-slate-800 dark:text-white">
@@ -312,20 +330,20 @@
                     <i class="fas fa-calendar-alt mr-2"></i><span class="lang-vi">ĐẶT HẸN</span><span class="lang-en">BOOK NOW</span>
                 </button>
             </div>
-            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fas fa-bars"></i></button>
+            <button class="md:hidden text-2xl dark:text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fas fa-bars"></i></button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-slate-700 p-4 dark:bg-slate-950">
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-cream border-t-2 border-slate-300 text-brand-navy p-4 dark:bg-slate-950 dark:text-white dark:border-slate-700 shadow-lg">
             <a href="#home" class="block py-2 hover:text-brand-gold"><span class="lang-vi">TRANG CHỦ</span><span class="lang-en">HOME</span></a>
             <a href="#services" class="block py-2 hover:text-brand-gold"><span class="lang-vi">DỊCH VỤ</span><span class="lang-en">SERVICES</span></a>
             <a href="#mortgage" class="block py-2 hover:text-brand-gold"><span class="lang-vi">VAY NHÀ</span><span class="lang-en">MORTGAGE</span></a>
             <a href="#immigration" class="block py-2 hover:text-brand-gold"><span class="lang-vi">DI TRÚ</span><span class="lang-en">IMMIGRATION</span></a>
             <a href="#blog" class="block py-2 hover:text-brand-gold"><span class="lang-vi">TIN TỨC</span><span class="lang-en">BLOG</span></a>
-            <div class="flex gap-2 mt-4 border-t border-slate-700 pt-4 flex-wrap">
-                <button onclick="setLanguage('en')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-white/10 transition text-sm">🇺🇸 <span>EN</span></button>
-                <button onclick="setLanguage('vi')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-white/10 transition text-sm">🇻🇳 <span>VN</span></button>
-                <button onclick="setLanguage('cn')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-white/10 transition text-sm">🇨🇳 <span>CN</span></button>
-                <button onclick="setLanguage('es')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-white/10 transition text-sm">🇪🇸 <span>ES</span></button>
-                <button onclick="setLanguage('fr')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-white/10 transition text-sm">🇫🇷 <span>FR</span></button>
+            <div class="flex gap-2 mt-4 border-t border-slate-200 dark:border-slate-700 pt-4 flex-wrap">
+                <button onclick="setLanguage('en')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-brand-navy/10 dark:hover:bg-white/10 transition text-sm">🇺🇸 <span>EN</span></button>
+                <button onclick="setLanguage('vi')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-brand-navy/10 dark:hover:bg-white/10 transition text-sm">🇻🇳 <span>VN</span></button>
+                <button onclick="setLanguage('cn')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-brand-navy/10 dark:hover:bg-white/10 transition text-sm">🇨🇳 <span>CN</span></button>
+                <button onclick="setLanguage('es')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-brand-navy/10 dark:hover:bg-white/10 transition text-sm">🇪🇸 <span>ES</span></button>
+                <button onclick="setLanguage('fr')" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-brand-navy/10 dark:hover:bg-white/10 transition text-sm">🇫🇷 <span>FR</span></button>
             </div>
         </div>
     </nav>
